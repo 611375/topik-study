@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f6f2">
+<title>TOPIK 韓文練習室</title>
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#242620;--muted:#70746c;--line:#e5e5dc;--green:#315f4c;--green2:#e7f0e9;--red:#a63d40;--redbg:#fae9e8;--gold:#8c6828;--goldbg:#f7efd9;--shadow:0 8px 28px #25281b0b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC",sans-serif;line-height:1.55}
+button,input,select{font:inherit}button{cursor:pointer;touch-action:manipulation}
+header{padding:22px max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right));background:#fff;border-bottom:1px solid var(--line)}
+.top{max-width:1050px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:14px}.brand{display:flex;align-items:center;gap:11px}.logo{width:44px;height:44px;border-radius:14px;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px}.eyebrow{font-size:12px;color:var(--muted);letter-spacing:.08em}.brand h1{font-size:21px;margin:0}.topnote{font-size:12px;color:var(--muted);text-align:right}
+main{max-width:1050px;margin:24px auto;padding:0 16px 44px}
+.hero{background:#e9eee7;border-radius:22px;padding:22px 23px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:16px}.hero h2{margin:0 0 6px;font-size:24px}.hero p{margin:0;color:#526057}.hero .tag{font-size:12px;background:#fff9;padding:9px 12px;border-radius:999px;white-space:nowrap;color:var(--green);font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}.stat,.panel,.nav{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.stat{padding:15px 17px}.stat .num{font-size:25px;font-weight:750;letter-spacing:-.03em}.stat .label{font-size:12px;color:var(--muted)}
+.nav{display:flex;gap:7px;padding:7px;overflow-x:auto;margin-bottom:18px;box-shadow:none}.nav button{border:0;background:transparent;color:var(--muted);padding:11px 14px;border-radius:12px;white-space:nowrap;font-weight:650}.nav button.active{background:var(--green);color:white}
+.panel{padding:22px;min-height:310px}.panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:18px}.panel h2{font-size:21px;margin:0 0 4px}.sub{font-size:13px;color:var(--muted);margin:0}.pill{display:inline-block;border-radius:999px;background:#f0f0e9;padding:5px 9px;font-size:12px;color:#606458}
+.btn{border:1px solid var(--line);background:white;color:var(--ink);padding:11px 15px;border-radius:12px;font-weight:650;min-height:44px}.btn.primary{background:var(--green);border-color:var(--green);color:white}.btn.soft{background:var(--green2);border-color:transparent;color:var(--green)}.btn.danger{color:var(--red)}.btn:disabled{opacity:.45;cursor:not-allowed}.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.flash{border:1px solid var(--line);border-radius:18px;padding:25px 20px;text-align:center;background:#fdfdfb;min-height:210px;display:flex;flex-direction:column;justify-content:center;align-items:center}.korean{font-size:clamp(28px,5vw,42px);font-weight:750;letter-spacing:-.02em;margin:0 0 10px}.meaning{font-size:20px;font-weight:650;margin:0 0 9px}.example{color:var(--muted);max-width:620px}.hidden{display:none!important}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.question{font-size:19px;font-weight:700;margin:12px 0 16px}.options{display:grid;gap:9px}.option{width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:13px;padding:13px 14px;min-height:48px}.option.selected{border-color:var(--green);background:var(--green2)}.option.correct{border-color:#7ba78a;background:var(--green2)}.option.wrong{border-color:#d99b9b;background:var(--redbg)}.feedback{border-radius:13px;padding:13px 14px;margin-top:14px;font-size:14px}.feedback.good{background:var(--green2);color:#244d38}.feedback.bad{background:var(--redbg);color:#842d30}.field{width:100%;border:1px solid var(--line);border-radius:12px;padding:13px 14px;min-height:48px;background:#fff}.reading-lines{display:grid;gap:12px}.reading-line{padding:13px 14px;background:#fafaf7;border:1px solid var(--line);border-radius:12px}.reading-line strong{display:block;font-size:17px;margin-bottom:3px}.reading-line span{color:var(--muted);font-size:14px}.wordchips{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.chip{background:var(--goldbg);color:#6e511d;padding:6px 9px;border-radius:9px;font-size:13px}.mistake{border:1px solid var(--line);border-radius:13px;padding:14px;margin-bottom:10px}.mistake h3{margin:0 0 5px;font-size:17px}.mistake p{margin:4px 0;color:var(--muted);font-size:14px}.empty{padding:34px 15px;text-align:center;color:var(--muted);background:#fafaf7;border-radius:14px}.section-title{margin:22px 0 10px;font-size:15px}.note{font-size:13px;color:var(--muted);line-height:1.6}.footer{color:var(--muted);font-size:12px;text-align:center;margin-top:18px}
+@media(max-width:620px){main{margin-top:16px;padding-left:12px;padding-right:12px}.hero{padding:18px;align-items:flex-start;flex-direction:column}.hero h2{font-size:21px}.hero .tag{white-space:normal}.stats{gap:8px}.stat{padding:12px}.stat .num{font-size:22px}.stat .label{font-size:11px}.panel{padding:17px}.panel-head{flex-direction:column}.grid2{grid-template-columns:1fr}.topnote{display:none}.nav button{padding:10px 12px}}
+</style>
+</head>
+<body>
+<header><div class="top"><div class="brand"><div class="logo">한</div><div><div class="eyebrow">PERSONAL STUDY SPACE</div><h1>TOPIK 韓文練習室</h1></div></div><div class="topnote">繁體中文介面 · 學習資料儲存在此瀏覽器</div></div></header>
+<main>
+<section class="hero"><div><h2>每天一點，穩穩累積韓文實力。</h2><p>單字、文法、閱讀與錯題複習，從這裡開始。</p></div><div class="tag">TOPIK II · 3–6 級練習方向</div></section>
+<section class="stats">
+ <div class="stat"><div class="num" id="statAnswered">0</div><div class="label">累計答題數</div></div>
+ <div class="stat"><div class="num" id="statAccuracy">—</div><div class="label">答題正確率</div></div>
+ <div class="stat"><div class="num" id="statMastered">0</div><div class="label">已掌握單字</div></div>
+</section>
+<nav class="nav" aria-label="學習功能">
+ <button class="active" data-tab="cards">單字卡</button><button data-tab="vocab">單字測驗</button><button data-tab="grammar">文法練習</button><button data-tab="reading">閱讀練習</button><button data-tab="mistakes">錯題本</button><button data-tab="progress">學習紀錄</button>
+</nav>
+<section class="panel" id="view"></section>
+<div class="footer">示範題為學習用自編題，不是官方 TOPIK 真題。請定期匯出備份。</div>
+</main>
+<script>
+const initial = {
+ vocab:[
+  {id:"v1",word:"환경",meaning:"環境",pos:"名詞",example:"환경을 보호해야 합니다.",translation:"應該保護環境。",level:3},
+  {id:"v2",word:"영향",meaning:"影響",pos:"名詞",example:"날씨가 기분에 영향을 줍니다.",translation:"天氣會影響心情。",level:4},
+  {id:"v3",word:"해결하다",meaning:"解決",pos:"動詞",example:"문제를 함께 해결합시다.",translation:"我們一起解決問題吧。",level:3},
+  {id:"v4",word:"증가하다",meaning:"增加",pos:"動詞",example:"온라인 수업을 듣는 학생이 증가했습니다.",translation:"上線上課程的學生增加了。",level:4},
+  {id:"v5",word:"반면에",meaning:"相反地；另一方面",pos:"副詞",example:"가격은 싸다. 반면에 품질은 좋지 않다.",translation:"價格便宜；另一方面，品質不好。",level:4},
+  {id:"v6",word:"참여하다",meaning:"參與",pos:"動詞",example:"많은 사람이 행사에 참여했습니다.",translation:"很多人參加了活動。",level:3},
+  {id:"v7",word:"부담",meaning:"負擔",pos:"名詞",example:"시험에 대한 부담이 큽니다.",translation:"對考試的壓力很大。",level:4},
+  {id:"v8",word:"실천하다",meaning:"實踐；付諸實行",pos:"動詞",example:"작은 일부터 실천해 보세요.",translation:"請從小事開始實踐看看。",level:4}
+ ],
+ grammar:[
+  {id:"g1",prompt:"시간이 없___ 택시를 탔어요.",options:["어서","지만","거나","는데도"],answer:0,explain:"「-어서/아서」可表示原因或先後關係。這裡是因為沒有時間，所以搭了計程車。","level":3,topic:"原因與結果"},
+  {id:"g2",prompt:"환경을 보호하기 ___ 일회용품을 줄여야 합니다.",options:["위해","때문에","대신에","따라서"],answer:0,explain:"「-기 위해(서)」表示目的，意思是「為了保護環境」。「때문에」表示原因；「대신에」是代替；「따라서」是因此。",level:4,topic:"目的表達"},
+  {id:"g3",prompt:"비가 오___ 경기는 계속되었습니다.",options:["는 바람에","는데도","도록","을수록"],answer:1,explain:"「-는데도」表示逆接，意思是「即使下雨，比賽還是繼續了」。「-는 바람에」通常表示意外原因造成不理想結果。",level:4,topic:"逆接表達"},
+  {id:"g4",prompt:"한국어를 꾸준히 공부할수록 실력이 ___.",options:["늘어요","늘어서","늘지만","늘도록"],answer:0,explain:"「-(으)ㄹ수록」表示「越……越……」，常用「공부할수록 실력이 늘어요」：越持續學韓文，實力越進步。",level:3,topic:"程度變化"}
+ ],
+ reading:[
+  {id:"r1",title:"환경을 지키는 작은 습관",level:3,lines:[
+   ["요즘 환경 문제에 관심을 가지는 사람이 많아졌습니다.","最近，關心環境問題的人變多了。"],
+   ["우리는 물을 아껴 쓰고 일회용품 사용을 줄일 수 있습니다.","我們可以節約用水，並減少使用一次性用品。"],
+   ["작은 행동이라도 꾸준히 실천하면 큰 변화가 생길 수 있습니다.","即使是小小的行動，只要持續實踐，也可能帶來很大的改變。"]
+  ],words:[["관심을 가지다","關心；感興趣"],["아껴 쓰다","節省使用"],["일회용품","一次性用品"],["꾸준히","持續地"],["변화","變化"]],question:"文章主要想表達什麼？",options:["只有政府才能保護環境","日常的小行動也能幫助環境","環境問題已經完全解決","使用一次性用品比較方便"],answer:1,explain:"文章最後一句指出，持續實踐小行動也能帶來大變化，因此答案是「日常的小行動也能幫助環境」。"},
+  {id:"r2",title:"온라인 수업의 장단점",level:4,lines:[
+   ["온라인 수업은 시간과 장소의 제약을 덜 받는다는 장점이 있습니다.","線上課程有較不受時間與地點限制的優點。"],
+   ["반면에 혼자 공부하다 보면 집중하기 어려울 때도 있습니다.","另一方面，獨自學習時有時也會難以集中精神。"],
+   ["따라서 자신에게 맞는 학습 방법을 찾는 것이 중요합니다.","因此，找到適合自己的學習方法很重要。"]
+  ],words:[["제약","限制"],["장점","優點"],["반면에","另一方面"],["집중하다","集中"],["따라서","因此"]],question:"文章建議學習者怎麼做？",options:["完全不要上線上課程","只在固定教室學習","找到適合自己的學習方式","不要獨自學習任何內容"],answer:2,explain:"最後一句「자신에게 맞는 학습 방법을 찾는 것이 중요합니다」表示找到適合自己的學習方法很重要。"}
+ ]
+};
+const KEY="topikStudyRoom_v1";
+let data, tab="cards", cardIndex=0, reveal=false, current=null, selected=null, checked=false, quizType="choice";
+const questionQueues={};
+function nextItem(type,list){if(!list||!list.length)return null;let q=questionQueues[type]||[];if(!q.length){q=list.map(x=>x.id).sort(()=>Math.random()-.5);const last=questionQueues[type+"Last"];if(q.length>1&&q[0]===last)q.push(q.shift())}const id=q.shift();questionQueues[type]=q;questionQueues[type+"Last"]=id;return list.find(x=>x.id===id)||list[0]}
+function fresh(){return {vocab:initial.vocab.map(x=>({...x})),grammar:initial.grammar.map(x=>({...x})),reading:initial.reading.map(x=>({...x})),history:[],mistakes:[],mastered:[],seen:[],settings:{}}}
+function load(){try{const raw=localStorage.getItem(KEY);if(!raw)return fresh();const d=JSON.parse(raw);return {...fresh(),...d,settings:d.settings||{}}}catch(e){return fresh()}}
+data=load();
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){alert("無法儲存：瀏覽器儲存空間可能已滿。請先匯出備份。")}renderStats()}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function renderStats(){const h=data.history;document.getElementById("statAnswered").textContent=h.length;document.getElementById("statAccuracy").textContent=h.length?Math.round(h.filter(x=>x.correct).length/h.length*100)+"%":"—";document.getElementById("statMastered").textContent=data.mastered.length}
+function setTab(t){tab=t;document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.tab===t));current=null;selected=null;checked=false;render()}
+document.querySelectorAll(".nav button").forEach(b=>b.addEventListener("click",()=>setTab(b.dataset.tab)));
+function render(){renderStats();const v=document.getElementById("view");if(tab==="cards")renderCards(v);else if(tab==="vocab")renderVocab(v);else if(tab==="grammar")renderGrammar(v);else if(tab==="reading")renderReading(v);else if(tab==="mistakes")renderMistakes(v);else renderProgress(v)}
+function head(title,sub,right=""){return `<div class="panel-head"><div><h2>${title}</h2><p class="sub">${sub}</p></div>${right}</div>`}
+function renderCards(v){const item=data.vocab[cardIndex%data.vocab.length];if(!item){v.innerHTML="<div class='empty'>目前沒有單字。請匯入學習資料。</div>";return}
+v.innerHTML=head("單字卡","先試著回想中文意思，再翻開答案。",`<span class="pill">第 ${cardIndex%data.vocab.length+1} / ${data.vocab.length} 張</span>`)+`
+<div class="flash"><div class="pill">TOPIK II · ${item.level} 級方向 · ${item.pos}</div><p class="korean">${escapeHtml(item.word)}</p><div id="cardAnswer" class="${reveal?"":"hidden"}"><p class="meaning">${escapeHtml(item.meaning)}</p><div class="example">${escapeHtml(item.example)}<br>${escapeHtml(item.translation)}</div></div><p class="sub ${reveal?"hidden":""}" style="margin-top:8px">先想一想，再點下方按鈕查看答案</p></div>
+<div class="actions"><button class="btn primary" id="revealBtn">${reveal?"隱藏答案":"顯示答案"}</button><button class="btn soft" id="knowBtn">我已掌握 ✓</button><button class="btn" id="prevCard">上一張</button><button class="btn" id="nextCard">下一張 →</button></div>
+<p class="note">「我已掌握」會將這個單字加入掌握清單；可在學習紀錄中查看。</p>`;
+document.getElementById("revealBtn").onclick=()=>{reveal=!reveal;renderCards(v)};
+document.getElementById("knowBtn").onclick=()=>{if(!data.mastered.includes(item.id))data.mastered.push(item.id);save();cardIndex=(cardIndex+1)%data.vocab.length;reveal=false;render()};
+document.getElementById("prevCard").onclick=()=>{cardIndex=(cardIndex-1+data.vocab.length)%data.vocab.length;reveal=false;render()};
+document.getElementById("nextCard").onclick=()=>{cardIndex=(cardIndex+1)%data.vocab.length;reveal=false;render()};
+}
+function makeQuestion(item,type){current={...item,type};selected=null;checked=false}
+function renderVocab(v){if(!current||current.type!=="vocab")makeQuestion(nextItem("vocab",data.vocab),"vocab");const q=current;const isFill=quizType==="fill";let options=[];
+if(!isFill){const wrong=[...new Set(data.vocab.filter(x=>x.id!==q.id&&norm(x.meaning)!==norm(q.meaning)).map(x=>x.meaning))].sort(()=>Math.random()-.5).slice(0,3);options=[...wrong,q.meaning].sort(()=>Math.random()-.5)}
+v.innerHTML=head("單字測驗","選擇題或填空題；答題後查看中文解釋。",`<span class="pill">TOPIK II</span>`)+`
+<div class="actions" style="margin-top:0;margin-bottom:16px"><button class="btn ${quizType==="choice"?"primary":""}" id="choiceMode">選擇題</button><button class="btn ${isFill?"primary":""}" id="fillMode">填空題</button></div>
+<div class="pill">詞性：${escapeHtml(q.pos)} · 建議級別：${q.level} 級</div><div class="question">${isFill?"請輸入「"+escapeHtml(q.word)+"」的中文意思：":"請選出「"+escapeHtml(q.word)+"」的正確中文意思。"}</div>
+${isFill?`<input class="field" id="fillAnswer" placeholder="輸入中文意思" ${checked?"disabled":""} value="${selected?escapeHtml(selected):""}">`:`<div class="options">${options.map((o,i)=>`<button class="option ${selected===o?"selected":""} ${checked&&o===q.meaning?"correct":""} ${checked&&selected===o&&o!==q.meaning?"wrong":""}" data-opt="${escapeHtml(o)}" ${checked?"disabled":""}>${String.fromCharCode(65+i)}. ${escapeHtml(o)}</button>`).join("")}</div>`}
+${checked?`<div class="feedback ${isCorrect(q,selected)?"good":"bad"}"><strong>${isCorrect(q,selected)?"答對了！":"再記一次。"}</strong><br>正確答案：${escapeHtml(q.meaning)}<br>${escapeHtml(q.example)}<br>${escapeHtml(q.translation)}</div>`:""}
+<div class="actions">${checked?`<button class="btn primary" id="nextQuestion">下一題 →</button>`:`<button class="btn primary" id="submitAnswer">確認答案</button>`}<button class="btn" id="showMeaning">直接查看單字解釋</button></div>`;
+document.getElementById("choiceMode").onclick=()=>{quizType="choice";current=null;selected=null;checked=false;render()};
+document.getElementById("fillMode").onclick=()=>{quizType="fill";current=null;selected=null;checked=false;render()};
+if(!isFill)v.querySelectorAll("[data-opt]").forEach(b=>b.onclick=()=>{if(!checked){selected=b.dataset.opt;renderVocab(v)}});
+const inp=document.getElementById("fillAnswer");if(inp)inp.oninput=()=>{selected=inp.value};
+document.getElementById("submitAnswer").onclick=()=>{if(isFill&&inp)selected=inp.value.trim();if(!selected){alert("請先選擇或輸入答案。");return}checked=true;record(q.id,"vocab",isCorrect(q,selected),selected,q.meaning);render()};
+document.getElementById("showMeaning").onclick=()=>alert(`${q.word}｜${q.meaning}\n${q.example}\n${q.translation}`);
+if(checked){const nextBtn=document.getElementById("nextQuestion");if(nextBtn)nextBtn.onclick=(event)=>{event.preventDefault();current=null;selected=null;checked=false;renderVocab(document.getElementById("view"));};}
+}
+function norm(s){return String(s||"").replace(/\s/g,"").replace(/[，。！？、；：]/g,"").toLowerCase()}
+function isCorrect(q,answer){return q.type==="vocab"?norm(answer)===norm(q.meaning):Number(answer)===q.answer}
+function renderGrammar(v){if(!current||current.type!=="grammar")makeQuestion(nextItem("grammar",data.grammar),"grammar");const q=current;
+v.innerHTML=head("文法練習","每題都有中文解析，並比較容易混淆的選項。",`<span class="pill">${q.level} 級方向 · ${escapeHtml(q.topic)}</span>`)+`
+<div class="question">${escapeHtml(q.prompt)}</div><div class="options">${q.options.map((o,i)=>`<button class="option ${selected===i?"selected":""} ${checked&&i===q.answer?"correct":""} ${checked&&selected===i&&i!==q.answer?"wrong":""}" data-idx="${i}" ${checked?"disabled":""}>${String.fromCharCode(65+i)}. ${escapeHtml(o)}</button>`).join("")}</div>
+${checked?`<div class="feedback ${selected===q.answer?"good":"bad"}"><strong>${selected===q.answer?"答對了！":"正確答案："+escapeHtml(q.options[q.answer])}</strong><br>${escapeHtml(q.explain)}<p style="margin:8px 0 0">選項比較：${q.options.map((o,i)=>`${o}：${i===q.answer?"符合句意":briefGrammar(o)}`).join("；")}</p></div>`:""}
+<div class="actions">${checked?`<button class="btn primary" id="nextQuestion">下一題 →</button>`:`<button class="btn primary" id="submitAnswer">確認答案</button>`}</div>`;
+v.querySelectorAll("[data-idx]").forEach(b=>b.onclick=()=>{if(!checked){selected=Number(b.dataset.idx);renderGrammar(v)}});
+if(!checked)document.getElementById("submitAnswer").onclick=()=>{if(selected===null){alert("請先選擇答案。");return}checked=true;record(q.id,"grammar",selected===q.answer,q.options[selected],q.options[q.answer]);render()};
+else document.getElementById("nextQuestion").onclick=()=>{current=null;selected=null;checked=false;render()};
+}
+function briefGrammar(o){return ({ "지만":"表示轉折「但是」","거나":"表示選擇「或者」","는데도":"表示逆接「即使……也……」","도록":"表示目的、程度或使動等，需看語境","때문에":"表示原因「因為」","대신에":"表示代替「代替／而不是」","따라서":"表示推論「因此」","을수록":"與前面搭配表示「越……越……」","어서":"表示原因或先後關係","는 바람에":"表示某事導致意外或不理想結果","위해":"表示目的「為了」"})[o]||"需依完整句子的語境判斷"} 
+function renderReading(v){if(!current||current.type!=="reading")makeQuestion(nextItem("reading",data.reading),"reading");const q=current;
+v.innerHTML=head("閱讀練習","先讀韓文，再查看逐句翻譯、詞彙和理解題。",`<span class="pill">${q.level} 級方向</span>`)+`
+<h3 style="margin:0 0 12px">${escapeHtml(q.title)}</h3><div class="reading-lines">${q.lines.map((l,i)=>`<div class="reading-line"><strong>${escapeHtml(l[0])}</strong><span>${escapeHtml(l[1])}</span></div>`).join("")}</div>
+<h3 class="section-title">重點詞彙</h3><div class="wordchips">${q.words.map(w=>`<span class="chip"><strong>${escapeHtml(w[0])}</strong> · ${escapeHtml(w[1])}</span>`).join("")}</div>
+<h3 class="section-title">理解測驗</h3><div class="question">${escapeHtml(q.question)}</div><div class="options">${q.options.map((o,i)=>`<button class="option ${selected===i?"selected":""} ${checked&&i===q.answer?"correct":""} ${checked&&selected===i&&i!==q.answer?"wrong":""}" data-idx="${i}" ${checked?"disabled":""}>${String.fromCharCode(65+i)}. ${escapeHtml(o)}</button>`).join("")}</div>
+${checked?`<div class="feedback ${selected===q.answer?"good":"bad"}"><strong>${selected===q.answer?"答對了！":"再讀一次文章。"}</strong><br>${escapeHtml(q.explain)}</div>`:""}
+<div class="actions">${checked?`<button class="btn primary" id="nextQuestion">下一篇 →</button>`:`<button class="btn primary" id="submitAnswer">確認答案</button>`}</div>`;
+v.querySelectorAll("[data-idx]").forEach(b=>b.onclick=()=>{if(!checked){selected=Number(b.dataset.idx);renderReading(v)}});
+if(!checked)document.getElementById("submitAnswer").onclick=()=>{if(selected===null){alert("請先選擇答案。");return}checked=true;record(q.id,"reading",selected===q.answer,q.options[selected],q.options[q.answer]);render()};
+else document.getElementById("nextQuestion").onclick=()=>{current=null;selected=null;checked=false;render()};
+}
+function record(id,type,correct,given,answer){data.history.push({id,type,correct,given:String(given),answer:String(answer),at:new Date().toISOString()});if(!correct&&!data.mistakes.some(m=>m.id===id&&m.type===type))data.mistakes.unshift({id,type,given:String(given),answer:String(answer),at:new Date().toISOString()});if(correct)data.mistakes=data.mistakes.filter(m=>!(m.id===id&&m.type===type));save()}
+function lookup(m){const list=m.type==="vocab"?data.vocab:m.type==="grammar"?data.grammar:data.reading;return list.find(x=>x.id===m.id)}
+function renderMistakes(v){v.innerHTML=head("錯題本","答錯的題目會自動收集；再次答對後會從錯題本移除。",`<span class="pill">${data.mistakes.length} 題待複習</span>`)+(data.mistakes.length?data.mistakes.map((m,i)=>{const q=lookup(m);if(!q)return"";let prompt=m.type==="vocab"?`${q.word}｜${q.meaning}`:m.type==="grammar"?q.prompt:q.title;return `<div class="mistake"><div class="pill">${m.type==="vocab"?"單字":m.type==="grammar"?"文法":"閱讀"}</div><h3>${escapeHtml(prompt)}</h3><p>你的答案：${escapeHtml(m.given)}　｜　正確答案：${escapeHtml(m.answer)}</p><div class="actions"><button class="btn soft" data-review="${i}">重新練習</button><button class="btn danger" data-remove="${i}">移除</button></div></div>`}).join(""):`<div class="empty"><div style="font-size:28px;margin-bottom:8px">✦</div>目前沒有待複習的錯題。<br>繼續練習，答錯的題目會自動出現在這裡。</div>`)+`<div class="actions"><button class="btn" id="clearMistakes" ${data.mistakes.length?"":"disabled"}>清空錯題本</button></div>`;
+v.querySelectorAll("[data-review]").forEach(b=>b.onclick=()=>{const m=data.mistakes[Number(b.dataset.review)];if(!m)return;tab=m.type==="vocab"?"vocab":m.type==="grammar"?"grammar":"reading";document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x.dataset.tab===tab));current={...lookup(m),type:m.type};selected=null;checked=false;render()});
+v.querySelectorAll("[data-remove]").forEach(b=>b.onclick=()=>{data.mistakes.splice(Number(b.dataset.remove),1);save();render()});
+document.getElementById("clearMistakes").onclick=()=>{if(confirm("確定清空所有錯題？這不會刪除學習紀錄。")){data.mistakes=[];save();render()}};
+}
+function renderProgress(v){const h=data.history,correct=h.filter(x=>x.correct).length,byType=["vocab","grammar","reading"].map(t=>({t,n:h.filter(x=>x.type===t).length,c:h.filter(x=>x.type===t&&x.correct).length}));v.innerHTML=head("學習紀錄","紀錄保存在目前瀏覽器。建議定期匯出 JSON 備份。")+
+`<div class="grid2"><div class="stat"><div class="num">${h.length}</div><div class="label">總答題數</div></div><div class="stat"><div class="num">${h.length?Math.round(correct/h.length*100):0}%</div><div class="label">整體正確率</div></div><div class="stat"><div class="num">${data.mastered.length} / ${data.vocab.length}</div><div class="label">已掌握單字</div></div><div class="stat"><div class="num">${data.mistakes.length}</div><div class="label">待複習錯題</div></div></div>
+<h3 class="section-title">各類答題表現</h3>${byType.map(x=>`<div style="margin:12px 0"><div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:5px"><span>${x.t==="vocab"?"單字測驗":x.t==="grammar"?"文法練習":"閱讀練習"}</span><span>${x.n?Math.round(x.c/x.n*100):0}% · ${x.n} 題</span></div><div style="height:8px;background:#efefe8;border-radius:9px;overflow:hidden"><div style="height:100%;width:${x.n?x.c/x.n*100:0}%;background:var(--green);border-radius:9px"></div></div></div>`).join("")}
+<h3 class="section-title">匯入自己的單字表</h3><p class="note">可匯入 CSV、TXT 或 JSON 檔，也可以直接把 Word／PDF 內的文字複製貼到下方。建議每行一個單字，欄位順序：韓文｜中文｜詞性｜韓文例句｜例句中文｜級別。詞性、例句、翻譯、級別可省略。若是掃描版 PDF，請先用 OCR 辨識文字。匯入只更新單字題庫，不會刪除文法、閱讀或學習紀錄。</p>
+<div style="display:grid;gap:10px"><input class="field" type="file" id="vocabFile" accept=".csv,.txt,.json,text/plain,text/csv,application/json"><textarea class="field" id="vocabPaste" rows="5" placeholder="例如：
+환경 | 環境 | 名詞 | 환경을 보호해야 합니다. | 應該保護環境。 | 3
+영향 | 影響 | 名詞 | 날씨가 영향을 줍니다. | 天氣會帶來影響。 | 4"></textarea><div class="actions" style="margin-top:0"><button class="btn primary" id="importVocabBtn">匯入單字</button><button class="btn" id="downloadTemplateBtn">下載單字表範本</button></div><div id="vocabMessage" class="note"></div></div>
+<h3 class="section-title">資料備份與還原</h3><p class="note">匯出會包含學習紀錄、錯題、已掌握單字及目前題庫。請把 JSON 檔存到「檔案」App 或 iCloud Drive。匯入會以備份檔內容取代目前資料。</p>
+<div class="actions"><button class="btn primary" id="exportBtn">匯出 JSON 備份</button><button class="btn" id="importBtn">匯入 JSON 備份</button><input class="hidden" type="file" id="importFile" accept=".json,application/json"><button class="btn danger" id="resetBtn">重設所有紀錄</button></div>
+<div id="importMessage" class="note" style="margin-top:10px"></div>`;
+document.getElementById("exportBtn").onclick=()=>{const blob=new Blob([JSON.stringify({...data,exportedAt:new Date().toISOString(),formatVersion:1},null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="topik-study-backup-"+new Date().toISOString().slice(0,10)+".json";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+document.getElementById("importBtn").onclick=()=>document.getElementById("importFile").click();
+document.getElementById("importFile").onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const imported=JSON.parse(await file.text());if(!imported||!Array.isArray(imported.vocab)||!Array.isArray(imported.history)||!Array.isArray(imported.mistakes))throw new Error("備份格式不完整");if(!confirm("匯入會取代目前資料，建議先匯出現有備份。確定繼續？"))return;data={...fresh(),...imported};delete data.exportedAt;delete data.formatVersion;save();document.getElementById("importMessage").textContent="匯入成功！";render()}catch(err){document.getElementById("importMessage").textContent="匯入失敗：檔案格式不正確或內容不完整。"}e.target.value=""};
+
+let vocabFileText="";
+document.getElementById("vocabFile").onchange=async e=>{const f=e.target.files[0];if(!f)return;try{if(/\.json$/i.test(f.name)){const raw=JSON.parse(await f.text());document.getElementById("vocabPaste").value=JSON.stringify(raw,null,2)}else{vocabFileText=await f.text();document.getElementById("vocabPaste").value=vocabFileText}document.getElementById("vocabMessage").textContent="檔案已讀取，請確認預覽文字後按「匯入單字」。Word／PDF 請複製文字貼到文字框。"}catch(err){document.getElementById("vocabMessage").textContent="讀取失敗。請改用 CSV／TXT／JSON，或複製內容貼到文字框。"}};
+function parseVocabInput(raw){let parsed;try{parsed=JSON.parse(raw)}catch(e){}if(Array.isArray(parsed)){return parsed.map((x,i)=>typeof x==="string"?parseVocabLine(x,i):({id:String(x.id||"import-v-"+(Date.now()+i)),word:x.word||x.korean||x.韓文||"",meaning:x.meaning||x.chinese||x.中文||"",pos:x.pos||x.partOfSpeech||x.詞性||"",example:x.example||x.例句||"",translation:x.translation||x.exampleTranslation||x.例句中文||"",level:Number(x.level||x.級別||3)})).filter(x=>x.word&&x.meaning)}if(parsed&&Array.isArray(parsed.vocab))return parseVocabInput(JSON.stringify(parsed.vocab));return raw.split(/\r?\n/).map((line,i)=>parseVocabLine(line,i)).filter(x=>x.word&&x.meaning)}
+function parseVocabLine(line,i){let t=line.trim();if(!t)return {word:"",meaning:""};if(/^韓文\s*[|,\t]/.test(t)||/^word\s*[,|\t]/i.test(t))return {word:"",meaning:""};let a;if(t.includes("|"))a=t.split("|").map(x=>x.trim());else if(t.includes("\t"))a=t.split("\t").map(x=>x.trim());else if(t.includes(","))a=t.split(",").map(x=>x.trim());else a=t.split(/\s{2,}/).map(x=>x.trim());return {id:"import-v-"+(Date.now()+i),word:a[0]||"",meaning:a[1]||"",pos:a[2]||"",example:a[3]||"",translation:a[4]||"",level:Math.min(6,Math.max(1,Number(a[5])||3))}}
+document.getElementById("importVocabBtn").onclick=()=>{const raw=document.getElementById("vocabPaste").value.trim();if(!raw){document.getElementById("vocabMessage").textContent="請先選擇檔案或貼上單字內容。";return}try{const items=parseVocabInput(raw);if(!items.length)throw new Error("沒有可用單字");const cleaned=items.map((x,i)=>({...x,id:String(x.id||"import-v-"+(Date.now()+i)),word:String(x.word).trim(),meaning:String(x.meaning).trim(),pos:String(x.pos||"未標示"),example:String(x.example||""),translation:String(x.translation||""),level:Number(x.level)||3})).filter(x=>x.word&&x.meaning);if(!cleaned.length)throw new Error("請確認每行至少有韓文和中文");if(!confirm(`找到 ${cleaned.length} 個單字。匯入後會以這份單字表取代目前單字題庫；文法、閱讀、答題紀錄和錯題資料會保留。確定匯入？`))return;data.vocab=cleaned;data.mastered=data.mastered.filter(id=>cleaned.some(x=>x.id===id));data.mistakes=data.mistakes.filter(m=>m.type!=="vocab"||cleaned.some(x=>x.id===m.id));questionQueues.vocab=[];cardIndex=0;current=null;selected=null;checked=false;save();document.getElementById("vocabMessage").textContent=`匯入成功！目前有 ${cleaned.length} 個單字。`;render()}catch(err){document.getElementById("vocabMessage").textContent="匯入失敗：請使用每行一個單字，欄位以 |、逗號或 Tab 分隔，並至少提供韓文與中文。"}};
+document.getElementById("downloadTemplateBtn").onclick=()=>{const csv="韓文,中文,詞性,韓文例句,例句中文,級別\n환경,環境,名詞,환경을 보호해야 합니다.,應該保護環境。,3\n영향,影響,名詞,날씨가 기분에 영향을 줍니다.,天氣會影響心情。,4";const blob=new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8;"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="TOPIK單字表範本.csv";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+document.getElementById("resetBtn").onclick=()=>{if(confirm("確定重設全部答題紀錄、錯題與已掌握單字？此操作無法復原，請先備份。")){data.history=[];data.mistakes=[];data.mastered=[];save();render()}};
+}
+render();
+</script>
+</body>
+</html>
